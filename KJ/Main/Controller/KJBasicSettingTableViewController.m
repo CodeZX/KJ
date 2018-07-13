@@ -9,6 +9,7 @@
 #import "KJBasicSettingTableViewController.h"
 
 @interface KJBasicSettingTableViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *motifTextField;
 
 @end
 
@@ -29,6 +30,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (_motifTextField.text.length > 0) {
+    
+        [[NSUserDefaults standardUserDefaults] setObject:_motifTextField.text forKey:@"motif"];
+        
+        [[NSUserDefaults standardUserDefaults] synchronize];
+         NSLog(@"%@",_motifTextField.text);
+    }else {
+        
+        NSLog(@"%@",@"无效主题");
+    }
+    
 }
 
 #pragma mark - Table view data source

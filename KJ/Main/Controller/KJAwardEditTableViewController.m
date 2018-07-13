@@ -1,24 +1,29 @@
 //
-//  KJListSettingTableViewController.m
+//  KJAwardEditTableViewController.m
 //  KJ
 //
-//  Created by 周鑫 on 2018/7/12.
+//  Created by 周鑫 on 2018/7/13.
 //  Copyright © 2018年 ZX. All rights reserved.
-//   名单设置
+//
 
-#import "KJListSettingTableViewController.h"
-#import "ListSettingTableViewCell.h"
+#import "KJAwardEditTableViewController.h"
 
-@interface KJListSettingTableViewController ()
-@property (nonatomic,strong) NSArray *nameListArray;
+@interface KJAwardEditTableViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *awardTextField;
+@property (weak, nonatomic) IBOutlet UITextField *totalPeopleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *singlePeopleTextField;
+
 @end
 
-@implementation KJListSettingTableViewController
+@implementation KJAwardEditTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
+    self.awardTextField.text = self.awardModel.name;
+    self.totalPeopleTextField.text = [NSString stringWithFormat:@"%ld",self.awardModel.totalPeople];
+    self.singlePeopleTextField.text = [NSString stringWithFormat:@"%ld",self.awardModel.singlePeople];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,6 +31,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)setAwardModel:(AwardModel *)awardModel {
+    
+    _awardModel = awardModel;
+   
+}
 #pragma mark - Table view data source
 
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -33,20 +44,20 @@
 //    return 0;
 //}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//#warning Incomplete implementation, return the number of rows
+//    return 0;
+//}
 
-    return self.nameListArray.count;
-}
-
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    ListSettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListSettingTableViewCell" forIndexPath:indexPath];
- 
- 
+    // Configure the cell...
+    
     return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -92,13 +103,4 @@
 }
 */
 
-
-#pragma mark -------------------------- lazy laod ----------------------------------------
-- (NSArray *)nameListArray {
-    
-    if (!_nameListArray) {
-        _nameListArray = [[NSMutableArray alloc]init];
-    }
-    return _nameListArray;
-}
 @end

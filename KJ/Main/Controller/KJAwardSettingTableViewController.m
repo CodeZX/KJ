@@ -4,12 +4,15 @@
 //
 //  Created by 周鑫 on 2018/7/12.
 //  Copyright © 2018年 ZX. All rights reserved.
-//
+// 奖项设置
 
 #import "KJAwardSettingTableViewController.h"
+#import "AwardModel.h"
+#import "AwardSettingTableViewCell.h"
+#import "KJAwardEditTableViewController.h"
 
 @interface KJAwardSettingTableViewController ()
-
+@property (nonatomic,strong) NSMutableArray *awardArray;
 @end
 
 @implementation KJAwardSettingTableViewController
@@ -17,11 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self setupUI];
+}
+
+- (void)setupUI {
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addClick:)];
+    
+}
+
+- (void)addClick:(id)sender {
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,25 +41,22 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.awardArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    AwardSettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AwardSettingCell" forIndexPath:indexPath];
+    AwardModel *awardModel = self.awardArray[indexPath.row];
+    cell.awardModel = awardModel;
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -94,5 +101,30 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    
+    UIButton *button = (UIButton *)sender;
+    UITableViewCell *cell = (UITableViewCell *) button.superview.superview;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    KJAwardEditTableViewController *VC = segue.destinationViewController;
+    VC.awardModel = self.awardArray[indexPath.row];
+    
+    
+}
+
+#pragma mark -------------------------- lazy laod ----------------------------------------
+- (NSMutableArray *)awardArray {
+    if (!_awardArray) {
+        _awardArray = [[NSMutableArray alloc]init];
+        AwardModel *awardModel1 = [[AwardModel alloc]initWithName:@"一等奖" totalPeople:1 singlePeople:1];
+        AwardModel *awardModel2 = [[AwardModel alloc]initWithName:@"2等奖" totalPeople:2 singlePeople:1];
+        [_awardArray addObject:awardModel1];
+        [_awardArray addObject:awardModel2];
+    }
+    return _awardArray;
+}
+
 
 @end

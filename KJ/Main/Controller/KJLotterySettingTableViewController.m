@@ -4,11 +4,12 @@
 //
 //  Created by 周鑫 on 2018/7/12.
 //  Copyright © 2018年 ZX. All rights reserved.
-//
+//  
 
 #import "KJLotterySettingTableViewController.h"
 
 @interface KJLotterySettingTableViewController ()
+
 
 @end
 
@@ -99,5 +100,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end
