@@ -39,6 +39,16 @@
 }
 #pragma mark - Table view data source
 
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.awardModel.name = self.awardTextField.text;
+    self.awardModel.totalPeople = [self.totalPeopleTextField.text integerValue];
+    self.awardModel.singlePeople = [self.singlePeopleTextField.text integerValue];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Incomplete implementation, return the number of sections
 //    return 0;

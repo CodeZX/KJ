@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class AwardModel;
 @interface KJAwardSettingTableViewController : UITableViewController
-
+- (void)addAward:(AwardModel *)awardModel;
 @end

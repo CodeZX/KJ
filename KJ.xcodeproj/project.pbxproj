@@ -36,6 +36,11 @@
 		3C01F55320F896920082F7D6 /* AwardSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F55220F896920082F7D6 /* AwardSettingTableViewCell.m */; };
 		3C01F55620F8A0110082F7D6 /* KJAwardEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F55520F8A0110082F7D6 /* KJAwardEditTableViewController.m */; };
 		3C01F55920F8B1000082F7D6 /* ListSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F55820F8B1000082F7D6 /* ListSettingTableViewCell.m */; };
+		3C01F55C20FC3FD20082F7D6 /* staffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F55B20FC3FD20082F7D6 /* staffModel.m */; };
+		3C01F55E20FC49450082F7D6 /* a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F55D20FC49450082F7D6 /* a.mp3 */; };
+		3C01F56020FC494F0082F7D6 /* b.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F55F20FC494E0082F7D6 /* b.mp3 */; };
+		3C01F56320FC7BFA0082F7D6 /* KJAddAwardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F56220FC7BFA0082F7D6 /* KJAddAwardTableViewController.m */; };
+		3C01F57420FC936D0082F7D6 /* KJAddListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F57320FC936D0082F7D6 /* KJAddListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +86,14 @@
 		3C01F55520F8A0110082F7D6 /* KJAwardEditTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAwardEditTableViewController.m; sourceTree = "<group>"; };
 		3C01F55720F8B1000082F7D6 /* ListSettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListSettingTableViewCell.h; sourceTree = "<group>"; };
 		3C01F55820F8B1000082F7D6 /* ListSettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListSettingTableViewCell.m; sourceTree = "<group>"; };
+		3C01F55A20FC3FD20082F7D6 /* staffModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = staffModel.h; sourceTree = "<group>"; };
+		3C01F55B20FC3FD20082F7D6 /* staffModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = staffModel.m; sourceTree = "<group>"; };
+		3C01F55D20FC49450082F7D6 /* a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a.mp3; sourceTree = "<group>"; };
+		3C01F55F20FC494E0082F7D6 /* b.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = b.mp3; sourceTree = "<group>"; };
+		3C01F56120FC7BFA0082F7D6 /* KJAddAwardTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAddAwardTableViewController.h; sourceTree = "<group>"; };
+		3C01F56220FC7BFA0082F7D6 /* KJAddAwardTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAddAwardTableViewController.m; sourceTree = "<group>"; };
+		3C01F57220FC936D0082F7D6 /* KJAddListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAddListTableViewController.h; sourceTree = "<group>"; };
+		3C01F57320FC936D0082F7D6 /* KJAddListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAddListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +147,8 @@
 		3C01F50C20F706350082F7D6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3C01F50D20F706350082F7D6 /* ViewController.m */,
 				3C01F50E20F706350082F7D6 /* ViewController.h */,
+				3C01F50D20F706350082F7D6 /* ViewController.m */,
 				3C01F53C20F7427E0082F7D6 /* KJLotterySettingTableViewController.h */,
 				3C01F53D20F7427E0082F7D6 /* KJLotterySettingTableViewController.m */,
 				3C01F53F20F75E140082F7D6 /* KJBasicSettingTableViewController.h */,
@@ -150,6 +163,10 @@
 				3C01F54C20F762900082F7D6 /* KJAwardListTableViewController.m */,
 				3C01F55420F8A0110082F7D6 /* KJAwardEditTableViewController.h */,
 				3C01F55520F8A0110082F7D6 /* KJAwardEditTableViewController.m */,
+				3C01F56120FC7BFA0082F7D6 /* KJAddAwardTableViewController.h */,
+				3C01F56220FC7BFA0082F7D6 /* KJAddAwardTableViewController.m */,
+				3C01F57220FC936D0082F7D6 /* KJAddListTableViewController.h */,
+				3C01F57320FC936D0082F7D6 /* KJAddListTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,6 +176,8 @@
 			children = (
 				3C01F54E20F88C0D0082F7D6 /* AwardModel.h */,
 				3C01F54F20F88C0D0082F7D6 /* AwardModel.m */,
+				3C01F55A20FC3FD20082F7D6 /* staffModel.h */,
+				3C01F55B20FC3FD20082F7D6 /* staffModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +205,8 @@
 		3C01F51420F706350082F7D6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3C01F55D20FC49450082F7D6 /* a.mp3 */,
+				3C01F55F20FC494E0082F7D6 /* b.mp3 */,
 				3C01F51520F706350082F7D6 /* Assets.xcassets */,
 				3C01F51620F706350082F7D6 /* LaunchScreen.storyboard */,
 				3C01F51820F706350082F7D6 /* Main.storyboard */,
@@ -278,6 +299,7 @@
 				3C01F53920F730C10082F7D6 /* home_bg@3x.png in Resources */,
 				3C01F53420F730C10082F7D6 /* set_button@3x.png in Resources */,
 				3C01F51E20F706350082F7D6 /* Assets.xcassets in Resources */,
+				3C01F55E20FC49450082F7D6 /* a.mp3 in Resources */,
 				3C01F53120F730C10082F7D6 /* bg@2x.png in Resources */,
 				3C01F53A20F730C10082F7D6 /* button@3x.png in Resources */,
 				3C01F51F20F706350082F7D6 /* LaunchScreen.storyboard in Resources */,
@@ -285,6 +307,7 @@
 				3C01F53520F730C10082F7D6 /* home_bg@2x.png in Resources */,
 				3C01F53720F730C10082F7D6 /* set_button@2x.png in Resources */,
 				3C01F53620F730C10082F7D6 /* set_button.png in Resources */,
+				3C01F56020FC494F0082F7D6 /* b.mp3 in Resources */,
 				3C01F53320F730C10082F7D6 /* home_bg.png in Resources */,
 				3C01F53820F730C10082F7D6 /* button@2x.png in Resources */,
 			);
@@ -299,12 +322,15 @@
 			files = (
 				3C01F51D20F706350082F7D6 /* AppDelegate.m in Sources */,
 				3C01F55320F896920082F7D6 /* AwardSettingTableViewCell.m in Sources */,
+				3C01F56320FC7BFA0082F7D6 /* KJAddAwardTableViewController.m in Sources */,
 				3C01F54D20F762900082F7D6 /* KJAwardListTableViewController.m in Sources */,
 				3C01F54420F7613C0082F7D6 /* KJAwardSettingTableViewController.m in Sources */,
 				3C01F53E20F7427E0082F7D6 /* KJLotterySettingTableViewController.m in Sources */,
 				3C01F54720F761660082F7D6 /* KJListSettingTableViewController.m in Sources */,
 				3C01F52120F706350082F7D6 /* main.m in Sources */,
 				3C01F54A20F761A30082F7D6 /* KJAbandonSettingTableViewController.m in Sources */,
+				3C01F55C20FC3FD20082F7D6 /* staffModel.m in Sources */,
+				3C01F57420FC936D0082F7D6 /* KJAddListTableViewController.m in Sources */,
 				3C01F55920F8B1000082F7D6 /* ListSettingTableViewCell.m in Sources */,
 				3C01F55620F8A0110082F7D6 /* KJAwardEditTableViewController.m in Sources */,
 				3C01F51C20F706350082F7D6 /* ViewController.m in Sources */,

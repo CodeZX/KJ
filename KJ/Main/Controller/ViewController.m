@@ -9,20 +9,48 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *motifLabel;
+@property (weak, nonatomic) IBOutlet UIButton *StartlotteryButton;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
+    [self setupUI];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"motif"]) {
+        
+        self.motifLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"motif"];
+    }
+    
+}
+
+- (void)setupUI {
+    
+    
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"motif"]) {
+        
+        self.motifLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"motif"];
+    }
+    
+}
+
+
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)startlotteryButton:(id)sender {
+    
+    
 }
 
 

@@ -8,6 +8,8 @@
 
 #import "KJListSettingTableViewController.h"
 #import "ListSettingTableViewCell.h"
+#import "staffModel.h"
+#import "KJAddListTableViewController.h"
 
 @interface KJListSettingTableViewController ()
 @property (nonatomic,strong) NSArray *nameListArray;
@@ -18,7 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupUI];
    
+}
+
+- (void)setupUI {
+    
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem  alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addList:)];
+}
+
+- (void)addList:(id)serder {
+    
+    
+    [self performSegueWithIdentifier:@"KJAddListTableViewController" sender:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +61,18 @@
  
  
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    
+    if ([segue.identifier isEqualToString:@"KJAddListTableViewController"]) {
+        
+        KJAddListTableViewController *VC = segue.destinationViewController;
+        VC.addListTableVC = self;
+        
+    }
+    
 }
 
 
@@ -97,7 +125,11 @@
 - (NSArray *)nameListArray {
     
     if (!_nameListArray) {
-        _nameListArray = [[NSMutableArray alloc]init];
+     
+        staffModel *model1 = [[staffModel alloc]initWithName:@"张三" ID:@"1"];
+        staffModel *model2 = [[staffModel alloc]initWithName:@"李四" ID:@"2"];
+        _nameListArray = @[model1,model2];
+        
     }
     return _nameListArray;
 }

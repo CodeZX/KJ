@@ -7,8 +7,10 @@
 //
 
 #import "KJAbandonSettingTableViewController.h"
+#import "staffModel.h"
 
 @interface KJAbandonSettingTableViewController ()
+@property (nonatomic,strong)NSArray *nameListArray;
 
 @end
 
@@ -31,25 +33,25 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.nameListArray.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+   
     
-    // Configure the cell...
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KJAbandonSettingTableViewController" forIndexPath:indexPath];
+ 
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -95,4 +97,16 @@
 }
 */
 
+#pragma mark -------------------------- lazy laod ----------------------------------------
+
+- (NSArray *)nameListArray {
+    
+    if (!_nameListArray) {
+        
+        staffModel *model1 = [[staffModel alloc]initWithName:@"张三" ID:@"1"];
+        staffModel *model2 = [[staffModel alloc]initWithName:@"李四" ID:@"1"];
+        _nameListArray = @[model1,model2];
+    }
+    return _nameListArray;
+}
 @end

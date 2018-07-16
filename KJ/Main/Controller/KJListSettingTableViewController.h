@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class staffModel;
 @interface KJListSettingTableViewController : UITableViewController
-
+- (void)addList:(staffModel *)staff;
 @end

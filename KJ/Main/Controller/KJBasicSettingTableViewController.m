@@ -34,12 +34,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    
+    
     if (_motifTextField.text.length > 0) {
     
         [[NSUserDefaults standardUserDefaults] setObject:_motifTextField.text forKey:@"motif"];
         
         [[NSUserDefaults standardUserDefaults] synchronize];
          NSLog(@"%@",_motifTextField.text);
+        
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"保存成功" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+        
     }else {
         
         NSLog(@"%@",@"无效主题");
