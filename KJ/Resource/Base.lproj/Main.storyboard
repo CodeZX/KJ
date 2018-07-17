@@ -613,7 +613,7 @@
         <!--添加名单-->
         <scene sceneID="g6w-Ou-g2j">
             <objects>
-                <tableViewController id="21A-NK-USW" sceneMemberID="viewController">
+                <tableViewController id="21A-NK-USW" customClass="KJAddListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lrL-dF-Zqf">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -699,6 +699,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="添加名单" id="A9q-j1-qoc"/>
+                    <connections>
+                        <outlet property="commentTextField" destination="DBG-bI-vqV" id="ubJ-VY-XjV"/>
+                        <outlet property="nameTextField" destination="1Qz-x0-OFu" id="NYw-tS-n2x"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KvG-zt-Df2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -738,9 +742,16 @@
                                             <rect key="frame" x="593" y="7" width="31" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="删除"/>
+                                            <connections>
+                                                <action selector="delete:" destination="9M4-mT-odm" eventType="touchUpInside" id="Yl3-Dv-sL5"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="IDlabel" destination="sUs-U2-EYH" id="Auf-Mo-lXz"/>
+                                    <outlet property="nameLabel" destination="PJr-BW-4II" id="Po9-Fb-WBy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

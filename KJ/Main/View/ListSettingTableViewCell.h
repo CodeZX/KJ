@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class staffModel;
 @interface ListSettingTableViewCell : UITableViewCell
+@property (nonatomic,strong) staffModel *staffModel;
 
 @end

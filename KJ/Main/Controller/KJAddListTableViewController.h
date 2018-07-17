@@ -12,5 +12,6 @@
 @class KJListSettingTableViewController;
 
 @interface KJAddListTableViewController : UITableViewController
+
 @property (nonatomic,weak) KJListSettingTableViewController *ListSettingTableVC;
 @end

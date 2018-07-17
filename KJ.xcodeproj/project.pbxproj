@@ -41,6 +41,8 @@
 		3C01F56020FC494F0082F7D6 /* b.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F55F20FC494E0082F7D6 /* b.mp3 */; };
 		3C01F56320FC7BFA0082F7D6 /* KJAddAwardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F56220FC7BFA0082F7D6 /* KJAddAwardTableViewController.m */; };
 		3C01F57420FC936D0082F7D6 /* KJAddListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F57320FC936D0082F7D6 /* KJAddListTableViewController.m */; };
+		3C01F57620FDC1910082F7D6 /* nameList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F57520FDC1910082F7D6 /* nameList.plist */; };
+		3C01F57820FDC5790082F7D6 /* award.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F57720FDC5790082F7D6 /* award.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		3C01F56220FC7BFA0082F7D6 /* KJAddAwardTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAddAwardTableViewController.m; sourceTree = "<group>"; };
 		3C01F57220FC936D0082F7D6 /* KJAddListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAddListTableViewController.h; sourceTree = "<group>"; };
 		3C01F57320FC936D0082F7D6 /* KJAddListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAddListTableViewController.m; sourceTree = "<group>"; };
+		3C01F57520FDC1910082F7D6 /* nameList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = nameList.plist; sourceTree = "<group>"; };
+		3C01F57720FDC5790082F7D6 /* award.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = award.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +216,8 @@
 				3C01F51820F706350082F7D6 /* Main.storyboard */,
 				3C01F51A20F706350082F7D6 /* main.m */,
 				3C01F51B20F706350082F7D6 /* Info.plist */,
+				3C01F57520FDC1910082F7D6 /* nameList.plist */,
+				3C01F57720FDC5790082F7D6 /* award.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C01F57620FDC1910082F7D6 /* nameList.plist in Resources */,
 				3C01F53220F730C10082F7D6 /* button.png in Resources */,
 				3C01F52220F706350082F7D6 /* Info.plist in Resources */,
 				3C01F53B20F730C10082F7D6 /* bg.png in Resources */,
@@ -303,6 +310,7 @@
 				3C01F53120F730C10082F7D6 /* bg@2x.png in Resources */,
 				3C01F53A20F730C10082F7D6 /* button@3x.png in Resources */,
 				3C01F51F20F706350082F7D6 /* LaunchScreen.storyboard in Resources */,
+				3C01F57820FDC5790082F7D6 /* award.plist in Resources */,
 				3C01F53020F730C10082F7D6 /* bg@3x.png in Resources */,
 				3C01F53520F730C10082F7D6 /* home_bg@2x.png in Resources */,
 				3C01F53720F730C10082F7D6 /* set_button@2x.png in Resources */,

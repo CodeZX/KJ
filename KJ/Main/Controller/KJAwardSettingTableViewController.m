@@ -29,6 +29,17 @@
     [self.tableView reloadData];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *nameListPath = [path stringByAppendingPathComponent:@"award"];
+    if ([NSKeyedArchiver archiveRootObject:self.awardArray toFile:nameListPath]) {
+        
+        NSLog(@"%@ -- %@",@"归档成功",nameListPath);
+        
+    }
+}
+
 - (void)setupUI {
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addClick:)];
@@ -143,14 +154,16 @@
 - (NSMutableArray *)awardArray {
     if (!_awardArray) {
         _awardArray = [[NSMutableArray alloc]init];
-        AwardModel *awardModel1 = [[AwardModel alloc]initWithName:@"一等奖" totalPeople:1 singlePeople:1];
-        AwardModel *awardModel2 = [[AwardModel alloc]initWithName:@"二等奖" totalPeople:2 singlePeople:1];
-        AwardModel *awardModel3 = [[AwardModel alloc]initWithName:@"三等奖" totalPeople:3 singlePeople:1];
-        AwardModel *awardModel4 = [[AwardModel alloc]initWithName:@"优秀奖" totalPeople:20 singlePeople:4];
-        [_awardArray addObject:awardModel1];
-        [_awardArray addObject:awardModel2];
-        [_awardArray addObject:awardModel3];
-        [_awardArray addObject:awardModel4];
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"award" ofType:@"plist"];
+        NSArray *array = [NSArray arrayWithContentsOfFile:plistPath];
+        for (NSDictionary *dic in array) {
+            
+            AwardModel *model = [[AwardModel alloc]init];
+            [model setValuesForKeysWithDictionary:dic];
+            [_awardArray addObject:model];
+                                 
+                                 
+        }
     }
     return _awardArray;
 }

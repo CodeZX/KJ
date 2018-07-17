@@ -11,6 +11,8 @@
 #import "staffModel.h"
 
 @interface KJAddListTableViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *commentTextField;
 
 @end
 
@@ -36,10 +38,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 1 && indexPath.row == 1) {
+    if (indexPath.section == 1 && indexPath.row == 0) {
         
-        staffModel *model = [[staffModel alloc]initWithName:@"王五" ID:@"4"];
+        staffModel *model = [[staffModel alloc]initWithName:self.nameTextField.text ID:@""];
         [self.ListSettingTableVC addList:model];
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 

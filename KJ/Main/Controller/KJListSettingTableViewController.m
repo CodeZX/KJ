@@ -12,7 +12,7 @@
 #import "KJAddListTableViewController.h"
 
 @interface KJListSettingTableViewController ()
-@property (nonatomic,strong) NSArray *nameListArray;
+@property (nonatomic,strong) NSMutableArray *nameListArray;
 @end
 
 @implementation KJListSettingTableViewController
@@ -24,13 +24,31 @@
    
 }
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [self.tableView reloadData];
+}
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *nameListPath = [path stringByAppendingPathComponent:@"nameList"];
+    if ([NSKeyedArchiver archiveRootObject:self.nameListArray toFile:nameListPath]) {
+        
+        NSLog(@"%@ -- %@",@"归档成功",nameListPath);
+        
+    }
+    
+    
+}
+
 - (void)setupUI {
     
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem  alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addList:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem  alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addListClick:)];
 }
 
-- (void)addList:(id)serder {
+- (void)addListClick:(id)serder {
     
     
     [self performSegueWithIdentifier:@"KJAddListTableViewController" sender:nil];
@@ -40,6 +58,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)delete:(id)sender {
+    
+    UIButton *button = (UIButton *) sender;
+    ListSettingTableViewCell *cell = button.superview.superview;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    [self.nameListArray removeObjectAtIndex:indexPath.row];
+    [self.tableView reloadData];
+    
+}
+
+- (void)addList:(staffModel *)staff {
+    
+    [self.nameListArray addObject:staff];
+    
 }
 
 #pragma mark - Table view data source
@@ -58,7 +91,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ListSettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListSettingTableViewCell" forIndexPath:indexPath];
- 
+    cell.staffModel = self.nameListArray[indexPath.row];
  
     return cell;
 }
@@ -67,9 +100,9 @@
     
     
     if ([segue.identifier isEqualToString:@"KJAddListTableViewController"]) {
-        
-        KJAddListTableViewController *VC = segue.destinationViewController;
-        VC.addListTableVC = self;
+
+        KJAddListTableViewController *VC =  segue.destinationViewController;
+        VC.ListSettingTableVC = self;
         
     }
     
@@ -122,13 +155,20 @@
 
 
 #pragma mark -------------------------- lazy laod ----------------------------------------
-- (NSArray *)nameListArray {
+- (NSMutableArray *)nameListArray {
     
     if (!_nameListArray) {
      
-        staffModel *model1 = [[staffModel alloc]initWithName:@"张三" ID:@"1"];
-        staffModel *model2 = [[staffModel alloc]initWithName:@"李四" ID:@"2"];
-        _nameListArray = @[model1,model2];
+        _nameListArray = [[NSMutableArray alloc]init];
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"nameList" ofType:@"plist"];
+        NSArray *array = [NSArray arrayWithContentsOfFile:plistPath];
+        for (NSDictionary *dic in array) {
+            staffModel *model = [[staffModel alloc]init];
+            [model setValuesForKeysWithDictionary:dic];
+            [_nameListArray addObject:model];
+            
+        }
+
         
     }
     return _nameListArray;
