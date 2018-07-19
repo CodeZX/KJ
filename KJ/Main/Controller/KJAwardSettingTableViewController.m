@@ -55,10 +55,15 @@
    [self performSegueWithIdentifier:@"KJAddAwardTableViewController" sender:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)delete:(id)sender {
+    
+    UIButton *button = (UIButton *)sender;
+    AwardSettingTableViewCell *cell = button.superview.superview;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    [self.awardArray removeObjectAtIndex:indexPath.row];
+    [self.tableView reloadData];
 }
+
 
 
 

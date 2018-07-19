@@ -42,10 +42,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 1 && indexPath.row == 0) {
+        
+        if (self.awardTextField.text.length) {
+            
+            AwardModel *award = [[AwardModel alloc]initWithName:self.awardTextField.text totalPeople:[self.totalPeopleTextField.text integerValue] singlePeople:[self.singlePeopleTextField.text integerValue]];
+            [self.awardSettingTableVC addAward:award];
+            [self.navigationController popViewControllerAnimated:YES];
+        }else {
+            
+            
+        }
        
-        AwardModel *award = [[AwardModel alloc]initWithName:@"四等奖" totalPeople:4 singlePeople:1];
-        [self.awardSettingTableVC addAward:award];
-        [self.navigationController popViewControllerAnimated:YES];
+        
         
     }
 }

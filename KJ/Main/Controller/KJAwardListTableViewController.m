@@ -4,11 +4,17 @@
 //
 //  Created by 周鑫 on 2018/7/12.
 //  Copyright © 2018年 ZX. All rights reserved.
-//
+//   获奖名单
 
 #import "KJAwardListTableViewController.h"
+#import "staffModel.h"
+#import "AwardModel.h"
+
 
 @interface KJAwardListTableViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
+@property (nonatomic,strong) NSArray *awardArray;
 
 @end
 
@@ -17,11 +23,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *awardListPath = [path stringByAppendingPathComponent:@"awardList"];
+    self.awardArray = [NSKeyedUnarchiver unarchiveObjectWithFile:awardListPath];
+    NSString *awardListString = [[NSString alloc]init];
+    for (AwardModel *awardModel in self.awardArray) {
+       awardListString  =  [awardListString stringByAppendingString:[NSString stringWithFormat:@"\n\t\t\t\t#####%@#####\n\t\t\t",awardModel.name]];
+        for (staffModel *model in awardModel.staffArray) {
+            awardListString  = [awardListString stringByAppendingString:[NSString stringWithFormat:@"\t%@",model.name]];
+            NSLog(@"%@",model.name);
+        }
+    }
+    
+//    self.textView.text = @"\t\t\t\t#####一等奖######\n \
+//                           #####二等奖######\n   \
+//                           #####三等奖######\n   \
+//                           #####优秀奖######\n";
+    
+    self.textView.text = awardListString;
 }
 
 - (void)didReceiveMemoryWarning {
