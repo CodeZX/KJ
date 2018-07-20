@@ -31,7 +31,7 @@
 		3C01F54420F7613C0082F7D6 /* KJAwardSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F54320F7613C0082F7D6 /* KJAwardSettingTableViewController.m */; };
 		3C01F54720F761660082F7D6 /* KJListSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F54620F761660082F7D6 /* KJListSettingTableViewController.m */; };
 		3C01F54A20F761A30082F7D6 /* KJAbandonSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F54920F761A30082F7D6 /* KJAbandonSettingTableViewController.m */; };
-		3C01F54D20F762900082F7D6 /* KJAwardListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F54C20F762900082F7D6 /* KJAwardListTableViewController.m */; };
+		3C01F54D20F762900082F7D6 /* KJAwardListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F54C20F762900082F7D6 /* KJAwardListViewController.m */; };
 		3C01F55020F88C0D0082F7D6 /* AwardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F54F20F88C0D0082F7D6 /* AwardModel.m */; };
 		3C01F55320F896920082F7D6 /* AwardSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F55220F896920082F7D6 /* AwardSettingTableViewCell.m */; };
 		3C01F55620F8A0110082F7D6 /* KJAwardEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F55520F8A0110082F7D6 /* KJAwardEditTableViewController.m */; };
@@ -43,9 +43,22 @@
 		3C01F57420FC936D0082F7D6 /* KJAddListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F57320FC936D0082F7D6 /* KJAddListTableViewController.m */; };
 		3C01F57620FDC1910082F7D6 /* nameList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F57520FDC1910082F7D6 /* nameList.plist */; };
 		3C01F57820FDC5790082F7D6 /* award.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F57720FDC5790082F7D6 /* award.plist */; };
+		3C01F57F2101BDAF0082F7D6 /* SDLaunchWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F57A2101BDAF0082F7D6 /* SDLaunchWebViewController.m */; };
+		3C01F5802101BDAF0082F7D6 /* SDLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F57B2101BDAF0082F7D6 /* SDLaunchViewController.m */; };
+		3C01F5812101BDAF0082F7D6 /* 进入应用.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F57D2101BDAF0082F7D6 /* 进入应用.png */; };
+		3C01F5902101BDC10082F7D6 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F5852101BDC10082F7D6 /* back@2x.png */; };
+		3C01F5912101BDC10082F7D6 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F5862101BDC10082F7D6 /* back@3x.png */; };
+		3C01F5922101BDC10082F7D6 /* XTJWebNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F5872101BDC10082F7D6 /* XTJWebNavigationViewController.m */; };
+		3C01F5932101BDC10082F7D6 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F5892101BDC10082F7D6 /* UIImage+Extension.m */; };
+		3C01F5942101BDC10082F7D6 /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F58A2101BDC10082F7D6 /* CountdownView.m */; };
+		3C01F5952101BDC10082F7D6 /* ATJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F58B2101BDC10082F7D6 /* ATJWebViewController.m */; };
+		3C01F5962101BDC10082F7D6 /* ATJURLFailture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F58C2101BDC10082F7D6 /* ATJURLFailture.m */; };
+		3C01F5972101BDC10082F7D6 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F58F2101BDC10082F7D6 /* back.png */; };
+		871299853B6BC862F0CF3339 /* libPods-KJ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC71703466066A7FE4C929AA /* libPods-KJ.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F95F037E54B2BCAF282C95B /* Pods-KJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KJ/Pods-KJ.debug.xcconfig"; sourceTree = "<group>"; };
 		3C01F4F220F705240082F7D6 /* KJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C01F50D20F706350082F7D6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3C01F50E20F706350082F7D6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -78,8 +91,8 @@
 		3C01F54620F761660082F7D6 /* KJListSettingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJListSettingTableViewController.m; sourceTree = "<group>"; };
 		3C01F54820F761A30082F7D6 /* KJAbandonSettingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAbandonSettingTableViewController.h; sourceTree = "<group>"; };
 		3C01F54920F761A30082F7D6 /* KJAbandonSettingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAbandonSettingTableViewController.m; sourceTree = "<group>"; };
-		3C01F54B20F762900082F7D6 /* KJAwardListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAwardListTableViewController.h; sourceTree = "<group>"; };
-		3C01F54C20F762900082F7D6 /* KJAwardListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAwardListTableViewController.m; sourceTree = "<group>"; };
+		3C01F54B20F762900082F7D6 /* KJAwardListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAwardListViewController.h; sourceTree = "<group>"; };
+		3C01F54C20F762900082F7D6 /* KJAwardListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAwardListViewController.m; sourceTree = "<group>"; };
 		3C01F54E20F88C0D0082F7D6 /* AwardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwardModel.h; sourceTree = "<group>"; };
 		3C01F54F20F88C0D0082F7D6 /* AwardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwardModel.m; sourceTree = "<group>"; };
 		3C01F55120F896920082F7D6 /* AwardSettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwardSettingTableViewCell.h; sourceTree = "<group>"; };
@@ -98,6 +111,27 @@
 		3C01F57320FC936D0082F7D6 /* KJAddListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAddListTableViewController.m; sourceTree = "<group>"; };
 		3C01F57520FDC1910082F7D6 /* nameList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = nameList.plist; sourceTree = "<group>"; };
 		3C01F57720FDC5790082F7D6 /* award.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = award.plist; sourceTree = "<group>"; };
+		3C01F57A2101BDAF0082F7D6 /* SDLaunchWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLaunchWebViewController.m; sourceTree = "<group>"; };
+		3C01F57B2101BDAF0082F7D6 /* SDLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLaunchViewController.m; sourceTree = "<group>"; };
+		3C01F57C2101BDAF0082F7D6 /* SDLaunchWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLaunchWebViewController.h; sourceTree = "<group>"; };
+		3C01F57D2101BDAF0082F7D6 /* 进入应用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进入应用.png"; sourceTree = "<group>"; };
+		3C01F57E2101BDAF0082F7D6 /* SDLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLaunchViewController.h; sourceTree = "<group>"; };
+		3C01F5832101BDC10082F7D6 /* ATJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATJWebViewController.h; sourceTree = "<group>"; };
+		3C01F5842101BDC10082F7D6 /* CountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownView.h; sourceTree = "<group>"; };
+		3C01F5852101BDC10082F7D6 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		3C01F5862101BDC10082F7D6 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		3C01F5872101BDC10082F7D6 /* XTJWebNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTJWebNavigationViewController.m; sourceTree = "<group>"; };
+		3C01F5882101BDC10082F7D6 /* ATJURLFailture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATJURLFailture.h; sourceTree = "<group>"; };
+		3C01F5892101BDC10082F7D6 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		3C01F58A2101BDC10082F7D6 /* CountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownView.m; sourceTree = "<group>"; };
+		3C01F58B2101BDC10082F7D6 /* ATJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATJWebViewController.m; sourceTree = "<group>"; };
+		3C01F58C2101BDC10082F7D6 /* ATJURLFailture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATJURLFailture.m; sourceTree = "<group>"; };
+		3C01F58D2101BDC10082F7D6 /* XTJWebNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTJWebNavigationViewController.h; sourceTree = "<group>"; };
+		3C01F58E2101BDC10082F7D6 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		3C01F58F2101BDC10082F7D6 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		3C01F598210244DB0082F7D6 /* KJ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KJ.entitlements; sourceTree = "<group>"; };
+		CC71703466066A7FE4C929AA /* libPods-KJ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KJ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E306EBF3927CD647437E636F /* Pods-KJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-KJ/Pods-KJ.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,17 +139,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871299853B6BC862F0CF3339 /* libPods-KJ.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		202989B9C9852B57D6377560 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC71703466066A7FE4C929AA /* libPods-KJ.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3C01F4E920F705240082F7D6 = {
 			isa = PBXGroup;
 			children = (
 				3C01F4F420F705240082F7D6 /* KJ */,
 				3C01F4F320F705240082F7D6 /* Products */,
+				7255BBD0D5C35B798A75C206 /* Pods */,
+				202989B9C9852B57D6377560 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +175,7 @@
 		3C01F4F420F705240082F7D6 /* KJ */ = {
 			isa = PBXGroup;
 			children = (
+				3C01F598210244DB0082F7D6 /* KJ.entitlements */,
 				3C01F51120F706350082F7D6 /* AppDelegate */,
 				3C01F50B20F706350082F7D6 /* Main */,
 				3C01F51420F706350082F7D6 /* Resource */,
@@ -140,6 +186,8 @@
 		3C01F50B20F706350082F7D6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3C01F5792101BDAF0082F7D6 /* SDLaunch(引导页) */,
+				3C01F5822101BDC10082F7D6 /* WebView */,
 				3C01F52320F730A10082F7D6 /* Resource */,
 				3C01F50C20F706350082F7D6 /* Controller */,
 				3C01F50F20F706350082F7D6 /* Model */,
@@ -163,8 +211,8 @@
 				3C01F54620F761660082F7D6 /* KJListSettingTableViewController.m */,
 				3C01F54820F761A30082F7D6 /* KJAbandonSettingTableViewController.h */,
 				3C01F54920F761A30082F7D6 /* KJAbandonSettingTableViewController.m */,
-				3C01F54B20F762900082F7D6 /* KJAwardListTableViewController.h */,
-				3C01F54C20F762900082F7D6 /* KJAwardListTableViewController.m */,
+				3C01F54B20F762900082F7D6 /* KJAwardListViewController.h */,
+				3C01F54C20F762900082F7D6 /* KJAwardListViewController.m */,
 				3C01F55420F8A0110082F7D6 /* KJAwardEditTableViewController.h */,
 				3C01F55520F8A0110082F7D6 /* KJAwardEditTableViewController.m */,
 				3C01F56120FC7BFA0082F7D6 /* KJAddAwardTableViewController.h */,
@@ -241,6 +289,47 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		3C01F5792101BDAF0082F7D6 /* SDLaunch(引导页) */ = {
+			isa = PBXGroup;
+			children = (
+				3C01F57A2101BDAF0082F7D6 /* SDLaunchWebViewController.m */,
+				3C01F57B2101BDAF0082F7D6 /* SDLaunchViewController.m */,
+				3C01F57C2101BDAF0082F7D6 /* SDLaunchWebViewController.h */,
+				3C01F57D2101BDAF0082F7D6 /* 进入应用.png */,
+				3C01F57E2101BDAF0082F7D6 /* SDLaunchViewController.h */,
+			);
+			path = "SDLaunch(引导页)";
+			sourceTree = "<group>";
+		};
+		3C01F5822101BDC10082F7D6 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				3C01F5832101BDC10082F7D6 /* ATJWebViewController.h */,
+				3C01F5842101BDC10082F7D6 /* CountdownView.h */,
+				3C01F5852101BDC10082F7D6 /* back@2x.png */,
+				3C01F5862101BDC10082F7D6 /* back@3x.png */,
+				3C01F5872101BDC10082F7D6 /* XTJWebNavigationViewController.m */,
+				3C01F5882101BDC10082F7D6 /* ATJURLFailture.h */,
+				3C01F5892101BDC10082F7D6 /* UIImage+Extension.m */,
+				3C01F58A2101BDC10082F7D6 /* CountdownView.m */,
+				3C01F58B2101BDC10082F7D6 /* ATJWebViewController.m */,
+				3C01F58C2101BDC10082F7D6 /* ATJURLFailture.m */,
+				3C01F58D2101BDC10082F7D6 /* XTJWebNavigationViewController.h */,
+				3C01F58E2101BDC10082F7D6 /* UIImage+Extension.h */,
+				3C01F58F2101BDC10082F7D6 /* back.png */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		7255BBD0D5C35B798A75C206 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F95F037E54B2BCAF282C95B /* Pods-KJ.debug.xcconfig */,
+				E306EBF3927CD647437E636F /* Pods-KJ.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,9 +337,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C01F50820F705250082F7D6 /* Build configuration list for PBXNativeTarget "KJ" */;
 			buildPhases = (
+				C303BCD149A56FE620525838 /* [CP] Check Pods Manifest.lock */,
 				3C01F4EE20F705240082F7D6 /* Sources */,
 				3C01F4EF20F705240082F7D6 /* Frameworks */,
 				3C01F4F020F705240082F7D6 /* Resources */,
+				98C9FF7D6CD6783447306EFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +363,14 @@
 				TargetAttributes = {
 					3C01F4F120F705240082F7D6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -301,6 +400,7 @@
 				3C01F57620FDC1910082F7D6 /* nameList.plist in Resources */,
 				3C01F53220F730C10082F7D6 /* button.png in Resources */,
 				3C01F52220F706350082F7D6 /* Info.plist in Resources */,
+				3C01F5912101BDC10082F7D6 /* back@3x.png in Resources */,
 				3C01F53B20F730C10082F7D6 /* bg.png in Resources */,
 				3C01F52020F706350082F7D6 /* Main.storyboard in Resources */,
 				3C01F53920F730C10082F7D6 /* home_bg@3x.png in Resources */,
@@ -309,12 +409,15 @@
 				3C01F55E20FC49450082F7D6 /* a.mp3 in Resources */,
 				3C01F53120F730C10082F7D6 /* bg@2x.png in Resources */,
 				3C01F53A20F730C10082F7D6 /* button@3x.png in Resources */,
+				3C01F5902101BDC10082F7D6 /* back@2x.png in Resources */,
 				3C01F51F20F706350082F7D6 /* LaunchScreen.storyboard in Resources */,
+				3C01F5812101BDAF0082F7D6 /* 进入应用.png in Resources */,
 				3C01F57820FDC5790082F7D6 /* award.plist in Resources */,
 				3C01F53020F730C10082F7D6 /* bg@3x.png in Resources */,
 				3C01F53520F730C10082F7D6 /* home_bg@2x.png in Resources */,
 				3C01F53720F730C10082F7D6 /* set_button@2x.png in Resources */,
 				3C01F53620F730C10082F7D6 /* set_button.png in Resources */,
+				3C01F5972101BDC10082F7D6 /* back.png in Resources */,
 				3C01F56020FC494F0082F7D6 /* b.mp3 in Resources */,
 				3C01F53320F730C10082F7D6 /* home_bg.png in Resources */,
 				3C01F53820F730C10082F7D6 /* button@2x.png in Resources */,
@@ -323,6 +426,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		98C9FF7D6CD6783447306EFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KJ/Pods-KJ-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KJ/Pods-KJ-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C303BCD149A56FE620525838 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KJ-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3C01F4EE20F705240082F7D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -330,8 +472,10 @@
 			files = (
 				3C01F51D20F706350082F7D6 /* AppDelegate.m in Sources */,
 				3C01F55320F896920082F7D6 /* AwardSettingTableViewCell.m in Sources */,
+				3C01F5942101BDC10082F7D6 /* CountdownView.m in Sources */,
+				3C01F5922101BDC10082F7D6 /* XTJWebNavigationViewController.m in Sources */,
 				3C01F56320FC7BFA0082F7D6 /* KJAddAwardTableViewController.m in Sources */,
-				3C01F54D20F762900082F7D6 /* KJAwardListTableViewController.m in Sources */,
+				3C01F54D20F762900082F7D6 /* KJAwardListViewController.m in Sources */,
 				3C01F54420F7613C0082F7D6 /* KJAwardSettingTableViewController.m in Sources */,
 				3C01F53E20F7427E0082F7D6 /* KJLotterySettingTableViewController.m in Sources */,
 				3C01F54720F761660082F7D6 /* KJListSettingTableViewController.m in Sources */,
@@ -341,8 +485,13 @@
 				3C01F57420FC936D0082F7D6 /* KJAddListTableViewController.m in Sources */,
 				3C01F55920F8B1000082F7D6 /* ListSettingTableViewCell.m in Sources */,
 				3C01F55620F8A0110082F7D6 /* KJAwardEditTableViewController.m in Sources */,
+				3C01F57F2101BDAF0082F7D6 /* SDLaunchWebViewController.m in Sources */,
+				3C01F5932101BDC10082F7D6 /* UIImage+Extension.m in Sources */,
+				3C01F5952101BDC10082F7D6 /* ATJWebViewController.m in Sources */,
+				3C01F5802101BDAF0082F7D6 /* SDLaunchViewController.m in Sources */,
 				3C01F51C20F706350082F7D6 /* ViewController.m in Sources */,
 				3C01F54120F75E140082F7D6 /* KJBasicSettingTableViewController.m in Sources */,
+				3C01F5962101BDC10082F7D6 /* ATJURLFailture.m in Sources */,
 				3C01F55020F88C0D0082F7D6 /* AwardModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,9 +630,11 @@
 		};
 		3C01F50920F705250082F7D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F95F037E54B2BCAF282C95B /* Pods-KJ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = KJ/KJ.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF86A6DCM;
 				INFOPLIST_FILE = "$(SRCROOT)/KJ/Resource/Info.plist";
@@ -493,15 +644,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zx.KJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3C01F50A20F705250082F7D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E306EBF3927CD647437E636F /* Pods-KJ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = KJ/KJ.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF86A6DCM;
 				INFOPLIST_FILE = "$(SRCROOT)/KJ/Resource/Info.plist";
@@ -511,7 +664,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zx.KJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -46,6 +46,8 @@
         if (self.awardTextField.text.length) {
             
             AwardModel *award = [[AwardModel alloc]initWithName:self.awardTextField.text totalPeople:[self.totalPeopleTextField.text integerValue] singlePeople:[self.singlePeopleTextField.text integerValue]];
+            award.finish = NO;
+            award.staffArray = [[NSMutableArray alloc]init];
             [self.awardSettingTableVC addAward:award];
             [self.navigationController popViewControllerAnimated:YES];
         }else {

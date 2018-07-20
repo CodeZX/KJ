@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KJAwardListTableViewController : UITableViewController
+@interface KJAwardListViewController : UIViewController
 
 @end

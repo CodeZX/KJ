@@ -64,7 +64,44 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"%d",indexPath.row);
+    if (indexPath.section == 3 && indexPath.row == 0) {
+        
+        
+        
+        // 删除文件   名单   奖品   中奖名单
+        
+        
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        BOOL res = YES;
+        
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *awardPath = [path stringByAppendingPathComponent:@"award"];
+        res =[fileManager removeItemAtPath:awardPath error:nil];
+        
+       
+        NSString *nameListPath = [path stringByAppendingPathComponent:@"award"];
+        res =[fileManager removeItemAtPath:nameListPath error:nil];
+        
+        
+        NSString *awardListPath = [path stringByAppendingPathComponent:@"awardList"];
+        res = [fileManager removeItemAtPath:awardListPath error:nil];
+        
+        
+//            NSString *message = [NSString stringWithFormat:@"%@已完成！",self.currentAwardModel.name];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"初始数据成功" message:@"可以重新开奖了" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                //            [self finishAction];
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"initialData" object:nil];
+                
+            }];
+            [alert addAction:action];
+            [self presentViewController:alert animated:YES completion:nil];
+       
+        
+        
+    }
+//    NSLog(@"%d",indexPath.row);
 }
 /*
 // Override to support conditional editing of the table view.

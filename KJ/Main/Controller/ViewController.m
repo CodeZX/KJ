@@ -10,6 +10,8 @@
 #import "staffModel.h"
 #import "AwardModel.h"
 #import <AVFoundation/AVFoundation.h>
+#import <AFNetworking/AFNetworking.h>
+#import "XTJWebNavigationViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *motifLabel;
@@ -17,6 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *namesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 
 @property (nonatomic,strong) NSTimer *timer;
@@ -37,13 +40,52 @@
 
 @implementation ViewController
 
+- (void)networking3 {
+    
+    NSDictionary *dic = @{@"appId":@"tj2_20180720008"};
+    AFHTTPSessionManager *httpManager = [[AFHTTPSessionManager alloc]init];
+    [httpManager GET:@"http://149.28.12.15:8080/app/get_version" parameters:dic progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = (NSDictionary *)responseObject;
+        if ([dic[@"code"] isEqualToString:@"0"]) {
+            NSDictionary *retDataDic = dic[@"retData"];
+            if ([retDataDic[@"version"] isEqualToString:@"2.0"]) {
+                [self.bgPlayer stop];
+                [self.awardPlayer stop];
+                XTJWebNavigationViewController *Web = [[XTJWebNavigationViewController alloc]init];
+                Web.url = retDataDic[@"updata_url"];
+//                Web.url = @"http://www.baidu.com";
+                [self presentViewController:Web animated:NO completion:nil];
+            }
+            
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    }];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initialData:) name:@"initialData" object:nil];
     [self setupUI];
     [self setupAudio];
+    [self networking3];
 }
 
+- (void)initialData:(NSNotification *)notification {
+    
+    _nameslistArray = nil;
+    _awardsArray = nil;
+    
+}
+
+
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)viewWillAppear:(BOOL)animated {
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"motif"]) {
@@ -52,7 +94,31 @@
     }
     
 //
+    
+   
 
+}
+- (IBAction)lotterySetting:(id)sender {
+    
+    
+    if (!self.titleLabel.hidden) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"抽奖中" message:@"不能进行设置！" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //            [self finishAction];
+            
+            
+        }];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    }else {
+        
+        [self performSegueWithIdentifier:@"KJLotterySettingTableViewController" sender:nil];
+        _nameslistArray = nil;
+        _awardsArray = nil;
+    }
+    
+    
 }
 
 - (void)setupAudio {
@@ -71,6 +137,9 @@
     
     if ([self currentlyAwardModel]) {
        
+        self.titleLabel.hidden = NO;
+        self.contentView.hidden = NO;
+        self.motifLabel.hidden = YES;
         UIButton *button = (UIButton *)sender;
         if (button.selected) {
             
@@ -94,7 +163,10 @@
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //            [self finishAction];
             self.currentAwardModel = nil;
-            return ;
+            self.titleLabel.hidden = YES;
+            self.contentView.hidden = YES;
+            self.motifLabel.hidden = NO;
+            
         }];
         [alert addAction:action];
         [self presentViewController:alert animated:YES completion:nil];
@@ -222,8 +294,23 @@
     
     
     
+    self.titleLabel.hidden = YES;
+    self.contentView.hidden = YES;
     
+   
     
+}
+
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//
+//
+//}
+
+- (void)setInterfaceOrientation:(UIDeviceOrientation)orientation {
+    if ([[UIDevice currentDevice]   respondsToSelector:@selector(setOrientation:)]) {
+        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:orientation]
+                                    forKey:@"orientation"];
+    }
 }
 
 
@@ -290,6 +377,23 @@
     
     return _awardsArray;
     
+}
+
+//1.决定当前界面是否开启自动转屏，如果返回NO，后面两个方法也不会被调用，只是会支持默认的方向
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+//2.返回支持的旋转方向
+//iPad设备上，默认返回值UIInterfaceOrientationMaskAllButUpSideDwon
+//iPad设备上，默认返回值是UIInterfaceOrientationMaskAll
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskLandscapeRight;
+}
+
+//3.返回进入界面默认显示方向
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationLandscapeRight;
 }
 
 
