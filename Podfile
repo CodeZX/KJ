@@ -3,7 +3,7 @@ platform :ios, '8.0’
 target ‘KJ’ do
 
 
-pod 'JPush'
+#pod 'JPush'
 pod 'MJRefresh'
 pod 'Masonry'
 pod 'AFNetworking'

@@ -551,19 +551,19 @@ bool isReverse = NO;//是否反向翻滚
 }
 
 
-//- (BOOL)shouldAutorotate {
-//    return YES;
-//}
+- (BOOL)shouldAutorotate {
+    return YES;
+}
 //
-//- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
-//    return UIInterfaceOrientationMaskPortrait;
-//}
-//
-////3.返回进入界面默认显示方向
-//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-//    return UIInterfaceOrientationPortrait;
-//}
-//
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskLandscapeRight;
+}
+
+//3.返回进入界面默认显示方向
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationLandscapeRight;
+}
+
 //- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
 //    
 //    if (size.width > size.height) {
